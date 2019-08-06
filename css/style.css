@@ -1,0 +1,11 @@
+@import './intro.css';
+@import './room-general.css';
+
+body {
+  font-family: monospace;
+  background: #FFD584;
+}
+
+h4 {
+  font-weight: 400;
+}

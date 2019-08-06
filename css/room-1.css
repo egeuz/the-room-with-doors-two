@@ -1,0 +1,45 @@
+.door-1:hover {
+  margin-left: -400px;
+}
+
+.door-2:hover {
+  margin-top: -350px;
+  margin-left: 200px;
+}
+
+.door-3:hover {
+  margin-top: -600px;
+}
+
+.door-4:hover {
+  margin-top: 50px;
+  margin-left: 250px;
+}
+
+.door-5:hover {
+  margin-top: 500px;
+}
+
+.door-6:hover {
+  margin-left: -550px;
+}
+
+.door-7:hover {
+  margin-top: 50px;
+  margin-left: -350px;
+}
+
+.door-8:hover {
+  margin-top: 50px;
+  margin-left: 250px;
+}
+
+.door-9:hover {
+  margin-top: 50px;
+  margin-left: 250px;
+}
+
+.correct-door:hover {
+  margin-top: 0;
+  margin-left: 0;
+}

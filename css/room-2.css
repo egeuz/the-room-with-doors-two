@@ -1,0 +1,43 @@
+.door.open {
+  transform: rotateY(90deg);
+}
+
+door.solved {
+  opacity: 0;
+}
+
+.image-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/circle.png);
+}
+
+#play-area {
+  position: relative;
+}
+
+#matching-game {
+  width: 100%;
+  max-width: 420px;
+  margin: 0px auto;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 30px;
+  position: absolute;
+  top: 55px;
+  left: 120px;
+}
+
+#matching-game a {
+  width: 100%;
+  max-width: 120px;
+  height: 200px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

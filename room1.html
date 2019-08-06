@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>THE ROOM WITH DOORS, WITH EVEN MORE DOORS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/room-1.css">
+  </head>
+  <body id="room-1">
+    <div id="app">
+      <div id="play-area">
+        <a class="door door-1" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-2" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-3" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-4" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-5" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-6" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-7" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-8" href="#">
+          <span class="door-handle"></span>
+        </a>
+        <a class="door door-9" href="#">
+          <span class="door-handle"></span>
+        </a>
+      </div>
+      <div id="text-box">
+        <p>You find yourself in a room. You would like to get out of this room. <br>
+        Luckily, there are doors here that you could use to get out. Nine of them!</p>
+      </div>
+    </div>
+
+    <script>
+      //RNG function
+      function rng(max, min) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      //Select the correct door at random
+      const correctDoorRNG = rng(1, 9);
+      const correctDoor = document.querySelector(`.door-${correctDoorRNG}`);
+      correctDoor.classList.add('correct-door');
+      correctDoor.href = "room2.html";
+
+      //Taunting text
+      const taunts = [
+        "Whoopsie.",
+        "That's a slippery one.",
+        "You'll get it next time!",
+        "Ah, almost.",
+        "Believe in yourself!",
+        "Maybe try another one?",
+        "Ack!",
+        "Oh no!",
+        "Actually try this time."
+      ];
+
+      const text = document.querySelector('#text-box p');
+      const doors = document.querySelectorAll('.door');
+
+      //Change textbox on hover
+      [...doors].forEach(function(door) {
+        door.addEventListener('mouseenter', function(){
+          let tauntRNG = rng(0, taunts.length);
+          text.innerHTML = taunts[tauntRNG];
+        });
+      });
+    </script>
+  </body>
+</html>
