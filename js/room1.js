@@ -7,7 +7,7 @@ function rng(min, max) {
 const correctDoorRNG = rng(1, 9);
 const correctDoor = document.querySelector(`.door-${correctDoorRNG}`);
 correctDoor.classList.add('correct-door');
-correctDoor.href = "../room2.html";
+correctDoor.href = "room2.html";
 
 //Taunting text array
 const taunts = [
