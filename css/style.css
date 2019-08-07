@@ -14,3 +14,28 @@ a {
   text-decoration: none;
   color: #D1A347;
 }
+
+.final-door {
+  margin: 0 auto;
+}
+
+#intro-container {
+  max-width: 600px;
+}
+
+#intro-container p {
+  margin-bottom: 100px;
+  color: #eee;
+}
+
+#exit {
+  background-image: url(../assets/victory.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#exit p {
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto;
+}

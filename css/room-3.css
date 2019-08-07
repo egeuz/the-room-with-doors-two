@@ -10,6 +10,7 @@
 .door-text {
   display: block;
   text-align: center;
+  width: 100%;
   margin-top: 30px;
   text-decoration: none;
   color: hsla(40, 66, 82, 0.8);
@@ -23,13 +24,31 @@
   position: fixed;
   width: 80%;
   height: 80vh;
+  max-height: 600px;
   left: 10%;
   display: none;
   background: #fff;
   margin: 50px auto;
   z-index: 4;
+  overflow-y: scroll;
+  background-image: url('../assets/negafrog.gif');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  text-align: center;
 }
 
 #negafrog-modal.open {
   display: block;
+}
+
+#negafrog-modal p {
+  font-size: 1.4rem;
+  width: 60%;
+  margin: 50px auto;
+}
+
+#close-button {
+  margin: 0 auto;
+  text-align: center;
 }

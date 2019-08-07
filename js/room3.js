@@ -2,7 +2,6 @@
 const numbers = [1,2,3,4,5,6,7,8,9];
 shuffle(numbers);
 const correctCode = generateCode(4);
-console.log(correctCode);
 let enteredCode = "";
 
 
@@ -28,7 +27,7 @@ doors.forEach((door) => {
     console.log(enteredCode);
 
     if(enteredCode === correctCode) {
-      window.location.href = 'room4.html';
+      window.location.href = '../room4.html';
     }
   });
 });
@@ -39,10 +38,10 @@ const negafrogModal = document.getElementById('negafrog-modal');
 const modalCloseButton = document.getElementById('close-button');
 secretDoor.addEventListener('click', (event) => {
   negafrogModal.classList.add('open');
+  console.log("The correct sequence is: " + correctCode);
 });
 
-modalCloseButton.addEventListener('click', (event) => {
-  event.preventDefault();
+modalCloseButton.addEventListener('click', () => {
   negafrogModal.classList.remove('open');
 });
 

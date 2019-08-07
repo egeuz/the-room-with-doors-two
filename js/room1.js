@@ -7,7 +7,7 @@ function rng(min, max) {
 const correctDoorRNG = rng(1, 9);
 const correctDoor = document.querySelector(`.door-${correctDoorRNG}`);
 correctDoor.classList.add('correct-door');
-correctDoor.href = "room2.html";
+correctDoor.href = "../room2.html";
 
 //Taunting text array
 const taunts = [
@@ -28,7 +28,7 @@ const doors = document.querySelectorAll('.door');
 //Change textbox on hover
 [...doors].forEach(function(door) {
   door.addEventListener('mouseenter', function(){
-    let tauntRNG = rng(0, taunts.length);
+    let tauntRNG = rng(0, taunts.length-1);
     text.innerHTML = taunts[tauntRNG];
   });
 });
