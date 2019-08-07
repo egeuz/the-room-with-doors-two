@@ -13,14 +13,14 @@ function shuffle(array) {
 //Distribute shapes randomly behind doors
 const backgroundImages = document.querySelectorAll('.matching-card a');
 backgroundImages.forEach((image) => {
-  image.style.backgroundImage = `url(../assets/${shapes[0]}.png)`;
+  image.parentNode.classList.add(shapes[0]);
   image.classList.add(shapes[0]);
   shapes.shift();
 });
 
 //Get the correct shape, add the next room link to it
 const correctShape = shapes[0];
-const correctLink = document.querySelector(`.${shapes[0]}`);
+const correctLink = document.querySelector(`a.${shapes[0]}`);
 correctLink.href = 'room3.html'
 
 const doors = document.querySelectorAll('.door');
@@ -31,9 +31,15 @@ doors.forEach((door) => {
     event.target.classList.add('open');
     openedDoors.push(event.target);
     if(openedDoors.length === 2) {
-      const firstShape = openedDoors[0].parentNode.firstChild.classList;
-      const secondShape = openedDoors[1].parentNode.firstChild.classList;
-      console.log(firstShape);
+      const firstShape = openedDoors[0].parentNode.classList[2];
+      const secondShape = openedDoors[1].parentNode.classList[2];
+      if(firstShape !== secondShape) {
+        openedDoors[0].classList.remove('open');
+        openedDoors[1].classList.remove('open');
+        openedDoors = [];
+      } else {
+        openedDoors = [];
+      }
     }
   });
 });

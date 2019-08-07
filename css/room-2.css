@@ -25,3 +25,23 @@ door.solved {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.matching-card a.circle {
+  background-image: url('../assets/circle.png');
+}
+
+.matching-card a.triangle {
+  background-image: url('../assets/triangle.png');
+}
+
+.matching-card a.square {
+  background-image: url('../assets/square.png');
+}
+
+.matching-card a.star {
+  background-image: url('../assets/star.png');
+}
+
+.matching-card a.pentagon {
+  background-image: url('../assets/pentagon.png');
+}
