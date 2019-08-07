@@ -1,0 +1,35 @@
+.gap {
+  height: 1000px;
+}
+
+.secret-door {
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.door-text {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: none;
+  color: hsla(40, 66, 82, 0.8);
+}
+
+.secret-door .door-text {
+  color: hsla(40, 66, 82, 0.8);
+}
+
+#negafrog-modal {
+  position: fixed;
+  width: 80%;
+  height: 80vh;
+  left: 10%;
+  display: none;
+  background: #fff;
+  margin: 50px auto;
+  z-index: 4;
+}
+
+#negafrog-modal.open {
+  display: block;
+}

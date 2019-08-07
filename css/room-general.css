@@ -3,12 +3,17 @@ p {
 }
 
 #app {
-  margin: 50px auto;
+  margin: 50px auto 100px;
   width: 90%;
   max-width: 800px;
-  height: 75vh;
+
+}
+
+#visual-box {
   background: #FFC656;
   box-shadow: 4px 4px #8c6c2f;
+  width: 100%;
+  height: 100%;
 }
 
 #play-area {
