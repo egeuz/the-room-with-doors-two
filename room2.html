@@ -9,92 +9,77 @@
   </head>
   <body id="room-1">
     <div id="app">
-      <div id="matching-game">
-        <a class="img-1" href="#"></a>
-        <a class="img-2" href="#"></a>
-        <a class="img-3" href="#"></a>
-        <a class="img-4" href="#"></a>
-        <a class="img-5" href="#"></a>
-        <a class="img-6" href="#"></a>
-        <a class="img-7" href="#"></a>
-        <a class="img-8" href="#"></a>
-        <a class="img-9" href="#"></a>
-      </div>
       <div id="play-area">
-        <a class="door door-1" href="#">
-          <span class="door-handle"></span>
-          <img class="door-img">
-        </a>
-        <a class="door door-2" href="#">
-          <span class="door-handle"></span>
-        </a>
-        <a class="door door-3" href="#">
-          <span class="door-handle"></span>
-        </a>
-        <a class="door door-4" href="#">
-          <span class="door-handle"></span>
-        </a>
-        <a class="door door-5" href="#">
-          <span class="door-handle"></span>
-        </a>
-        <a class="door door-6" href="#">
-          <span class="door-handle"></span>
-        </a>
-        <a class="door door-7" href="#">
-          <span class="door-handle"></span>
-        </a>
-        <a class="door door-8" href="#">
-          <span class="door-handle"></span>
-        </a>
-        <a class="door door-9" href="#">
-          <span class="door-handle"></span>
-        </a>
+
+        <div class="matching-card card-1">
+          <a href="#"></a>
+          <div class="door door-1">
+            <span class="door-handle"></span>
+          </div>
+        </div>
+
+        <div class="matching-card card-2">
+          <a href="#"></a>
+          <div class="door door-2">
+            <span class="door-handle"></span>
+          </div>
+        </div>
+
+        <div class="matching-card card-3">
+          <a href="#"></a>
+          <div class="door door-3">
+            <span class="door-handle"></span>
+          </div>
+        </div>
+
+          <div class="matching-card card-4">
+            <a href="#"></a>
+            <div class="door door-4">
+              <span class="door-handle"></span>
+            </div>
+          </div>
+
+          <div class="matching-card card-5">
+            <a href="#"></a>
+            <div class="door door-5">
+              <span class="door-handle"></span>
+            </div>
+          </div>
+
+          <div class="matching-card card-6">
+            <a href="#"></a>
+            <div class="door door-6">
+              <span class="door-handle"></span>
+            </div>
+          </div>
+
+          <div class="matching-card card-7">
+            <a href="#"></a>
+            <div class="door door-7">
+              <span class="door-handle"></span>
+            </div>
+          </div>
+
+          <div class="matching-card card-8">
+            <a href="#"></a>
+            <div class="door door-8">
+              <span class="door-handle"></span>
+            </div>
+          </div>
+
+          <div class="matching-card card-9">
+            <a href="#"></a>
+            <div class="door door-9">
+              <span class="door-handle"></span>
+            </div>
+          </div>
       </div>
+      
       <div id="text-box">
         <p>The delight of finding the right door leaves its place to disappointment as you're led to another room, which has a bunch of doors in it.</p>
       </div>
     </div>
 
-    <script>
-      //Open door animation
-      const doors = document.querySelectorAll('.door');
-      doors.forEach((door) => {
-        door.addEventListener('click', (event) => {
-          event.target.classList.add('open');
-          // if(document.querySelectorAll('.open').length > 2) {
-          //   let [door1, door2] = document.querySelectorAll('.open');
-          // }
-        });
-      });
-
-      //Shuffle algorithm
-      function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-          let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
-          [array[i], array[j]] = [array[j], array[i]]; // swap elements
-        }
-      }
-
-      //Create and randomize shape list
-      const shapes = ["circle", "circle", "square", "square", "triangle", "triangle", "pentagon", "pentagon", "star", "star"];
-      shuffle(shapes);
-
-      //Distribute shapes randomly behind doors
-      const matchCards = document.querySelectorAll('#matching-game a');
-      matchCards.forEach((card) => {
-        card.style.backgroundImage = `url(assets/${shapes[0]}.png)`;
-        card.style.backgroundColor = '#FFC656';
-        shapes.shift();
-      });
-
-      //Get the correct shape
-      const correctShape = shapes[0];
-
-      //Add next door link to the door with the correct shape
-      const correctCard = matchCards.filter(card => card.style.backgroundImage === `url(assets/${shapes[0]}.png)`);
-      console.log(correctCard.classList);
-
-
-    </script>
+    <script src="js/room2.js"></script>
   </body>
 </html>
