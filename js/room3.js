@@ -27,7 +27,7 @@ doors.forEach((door) => {
     console.log(enteredCode);
 
     if(enteredCode === correctCode) {
-      window.location.href = '../room4.html';
+      window.location.href = './room4.html';
     }
   });
 });
